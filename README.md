@@ -121,14 +121,19 @@ This repository contains code for a machine learning–based trading agent that 
            - VWAP (Volume Weighted Average Price)
 ---
 ##Output Summary 
-- ** Test_1.py:
-    - Logs each trading decision (Buy/Sell/Hold).
-    - Tracks account balance and shares.
-    - Produces: daily_orders.xlsx with logs and performance report. & Balance and price prediction plots via matplotlib.
 - ** Test_3.py:
     - Prints single-day trading recommendations.
     - States predicted closing price, estimated execution price, and expected % change.
     - Recommends whether to BUY, SELL, or HOLD, based on your holding status and prediction confidence.
+- ** Test_1.py:
+    - Logs each trading decision (Buy/Sell/Hold).
+    - Tracks account balance and shares.
+    - Produces: daily_orders.xlsx with logs and performance report. & Balance and price prediction plots via matplotlib. 
+--- 
+##Notes 
+1. to simulate the provided period March 24-28, 2025 is done by using Test_1.py.
+2. to predict a decision (Buy, Sell, Hold) for only one day based on the last-day closing price we use Test_3.py (and this is repeated every day to fill the Google forms that are required)
+3. There is also a report included in the repository that explains the model used and the reasons why I used it.
 
 
        
