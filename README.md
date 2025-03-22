@@ -70,3 +70,66 @@ This repository contains code for a machine learning–based trading agent that 
   Run:
   ```bash
   python3 Test_3.py YYYY-MM-DD
+  ```
+   #### Holding Shares  
+  Run:
+  ```bash
+  python3 Test_3.py YYYY-MM-DD holding <avg_buy_price>
+  ```
+  ---
+  ## Requirements:
+  - **Before Running the scripts must install
+    Run:
+      ```bash
+      pip install yfinance xgboost pandas matplotlib openpyxl
+    ```
+      
+   ---
+  ## Setup & Execution Steps:
+  1. Clone or download this repository.
+  2. Make sure Python 3 is installed on your system.
+  3. Install dependencies using the command above.
+  4. Run the simulation:
+       - To simulate a full 5-day period (Test_1.py):
+           Run:
+         ```bash
+         python3 Test_1.py
+         ```
+      - To get a daily trading recommendation (Test_3.py):
+          -If the user is not holding shares
+        Run:
+        ```bash
+        python3 Test_3.py 2025-03-24
+        ```
+     - If the user is holding shares at a certain average buy price (ex $192.45)
+       Run:
+       ```bash
+       python3 Test_3.py 2025-03-24 holding 192.45
+       ```
+       ---
+       ## Data & Indicators
+       - ** Stock Data Source:
+           - Tesla stock data is pulled from Yahoo Finance using the yfinance API.
+       - ** Technical Indicators Used:
+           - SMA (Simple Moving Average)
+           - EMA (Exponential Moving Average)
+           - RSI (Relative Strength Index)
+           - MACD (Moving Average Convergence Divergence)
+           - ADX (Average Directional Index)
+           - Bollinger Bands (Upper, Lower)
+           - VWAP (Volume Weighted Average Price)
+---
+##Output Summary 
+- ** Test_1.py:
+    - Logs each trading decision (Buy/Sell/Hold).
+    - Tracks account balance and shares.
+    - Produces: daily_orders.xlsx with logs and performance report. & Balance and price prediction plots via matplotlib.
+- ** Test_3.py:
+    - Prints single-day trading recommendations.
+    - States predicted closing price, estimated execution price, and expected % change.
+    - Recommends whether to BUY, SELL, or HOLD, based on your holding status and prediction confidence.
+
+
+       
+                
+  
